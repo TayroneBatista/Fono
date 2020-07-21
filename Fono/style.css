@@ -1,0 +1,378 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    min-height: 8vh;
+    width: 70%;
+    margin: auto;
+}
+.logo {
+    color: blue;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 24px;
+    padding: 50px;
+}
+.md_author{
+    color:black;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 24px;
+    padding: 35px;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    padding: 25px;
+    border-bottom: 2px solid blue;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    color: blue;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.burguer {
+    display: none;
+    cursor: pointer;
+}
+
+.burguer div{
+    width: 25px;
+    height: 3px;
+    background-color: whitesmoke;
+    margin: 5px;
+    transition: transform 0.3s ease;
+}
+@media screen and (max-width:1024px) {
+    .nav-links{
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #5d4954;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burguer{
+        display: block;
+    }
+    .container_sobre{
+        display: flex;
+        flex-direction: column;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .card_servicos{
+        display: flex;
+        flex-direction: column;
+    }
+    .card_servicos{
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .img_servico img{
+        width: 50%;
+    }
+    .cards_artigos{
+        display: flex;
+        flex-direction: column;
+    }
+    .card_artigo{
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@media screen and (max-width: 1024px) {
+
+    .container_sobre{
+        display: flex;
+        flex-direction: column;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+}
+@media screen and (max-width: 1440px) {
+
+    .container_sobre{
+        width: 90%;
+    }
+
+}
+
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+
+
+/* Container Sobre */
+
+.container_sobre{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.img_sobre{
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+.content_sobre{
+    width: 100%;
+    text-align: start;
+    padding: 25px;
+}
+.content_sobre h3{
+    font-size: 32px;
+    line-height: 48px;
+    color: #157FC9
+}
+.content_sobre p{
+    font-size: 24px;
+    line-height: 34px;
+    color: gray;
+    padding: 25px;
+}
+.content_sobre a{
+    padding: 25px;
+    display: inline-block;
+    background-color: #157FC9;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 24px;
+}
+.content_sobre a:hover{
+    background-color: white;
+    color: #157FC9;
+    border: 1px solid #157FC9;
+    border-radius: 5px;
+}
+
+
+/* Container Serviço */
+
+.tittle_servico{
+    text-align: center;
+    font-size: 48px;
+    line-height: 60px;
+    padding: 5%;
+    color: blue;
+}
+
+.card_servicos{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 3%;
+}
+
+.img_servico img{
+    border-radius: 100%;
+    text-align: center;
+}
+
+.content_servico{
+    text-align: center;
+    padding: 5%;
+    font-size: 24px;
+    line-height: 32px;
+    color: #157FC9;
+}
+
+
+/* Container Contato */
+
+.container_contato{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: #157FC9;
+    margin-bottom: 5%;
+}
+.form_nome{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: start;
+}
+.content_nome{
+    display: flex;
+    flex-direction: column;
+}
+
+.content_sobrenome{
+    display: flex;
+    flex-direction: column;
+}
+
+.tittle_contato{
+    text-align: center;
+    font-size: 48px;
+    line-height: 60px;
+    padding: 3%;
+    color: blue;
+}
+
+/* Container Depoimentos */
+
+.depoimentos{
+    background-color: #157FC9;
+    padding: 5%;
+}
+
+.container_depoimentos{
+    width: 70%;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.tittle_depoimentos{
+    text-align: center;
+    font-size: 48px;
+    line-height: 60px;
+    padding: 5%;
+    color: white;
+    width: 70%;
+    margin: auto;
+}
+.perfil_depoimentos img{
+    border-radius: 100%;
+    padding: 4%;
+}
+.perfil_depoimentos p{
+    font-size: 32px;
+    line-height: 48px;
+    color: white;
+    padding: 3%;
+}
+.msg_depoimento{
+    width: 70%;
+    margin: auto;
+    padding: 5%;
+}
+.msg_depoimento p{
+    font-size: 24px;
+    line-height: 32px;
+    color: white;
+}
+
+
+/* Container Artigos */
+
+.tittle_artigo{
+    text-align: start;
+    font-size: 48px;
+    line-height: 60px;
+    padding: 2%;
+    color: blue;
+    width: 70%;
+    margin: auto;
+}
+
+.cards_artigos{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.content_artigo{
+    width: 70%;
+    margin: auto;
+    text-align: start;
+    padding: 10px;
+}
+.content_artigo p{
+    font-size: 20px;
+    line-height: 32px;
+    color: gray;
+}
+.btn_artigo{
+    display: inline-block;
+    padding: 20px;
+    background-color: #157FC9;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 20px;
+}
+.btn_artigo:hover{
+    background-color: white;
+    border: 1px solid #157FC9;
+    color: #157FC9;
+}
